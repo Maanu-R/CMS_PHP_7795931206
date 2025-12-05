@@ -1,16 +1,18 @@
 <?php
 
-	// define database parameters as an array
-	$db = array('db_host'=>'localhost',
-							'db_user'=>'',
-							'db_pass'=>'',
-							'db_name'=>'');
+    // define database parameters as an array
+    $db = array(
+        'db_host' => 'localhost',
+        'db_user' => 'Arun07',
+        'db_pass' => 'msd#777',
+        'db_name' => 'cms_db'
+    );
+    
+    // loop thru the array to make them into constants
+    foreach($db as $key=>$value) {
+        define(strtoupper($key), $value);
+    }
 	
-	// loop thru the array to make them into constants
-	foreach($db as $key=>$value) {
-		define(strtoupper($key), $value);
-	}
-
 	// connect to database
 	$con = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 	
